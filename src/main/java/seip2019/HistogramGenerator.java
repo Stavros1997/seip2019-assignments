@@ -31,22 +31,7 @@ public class HistogramGenerator {
 		}
 	}
 
-	public void generator() {
-		/***
-		 * 
-		 * @author agkortzis The purpose of this class is to demonstrate a simple
-		 *         scenario of a JFreeChart XYLine chart.
-		 */
-		public class JFreeChartXYLineChartDemo {
-
-			/***
-			 * Receives a single dimension Integer array. From this array the dataset that
-			 * will be used for the visualization is generated. Finally, The chart is
-			 * generated with the use of the aforementioned dataset and then presented in
-			 * the screen.
-			 * 
-			 * @param dataValues Single dimension integer array
-			 */
+	
 			public void generateChart(int[] dataValues) {
 				/*
 				 * The XYSeriesCollection object is a set XYSeries series (dataset) that can be
