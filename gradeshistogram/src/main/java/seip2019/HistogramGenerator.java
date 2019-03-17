@@ -16,45 +16,70 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 public class HistogramGenerator {
+	public static void main(String[] args) {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-		Scanner scn = new Scanner(new File(args[0]));
-
-		String sCurrentLine;
-		String token1;
-
-		ArrayList<String> temps = new ArrayList<String>();
-		while (scn.hasNext()) {
-			token1 = scn.next();
-			temps.add(token1);
+		File inFile = null;
+		if (0 < args.length) {
+			inFile = new File(args[0]);
 		}
-		int[] fr = new int[temps.size()];
-		int visited = -1;
+		generateChart(cfreq(inFile));
 
-		for (int i = 0; i < temps.size(); i++) {
-			int count = 1;
-			for (int j = i + 1; j < temps.size(); j++) {
-				if (temps.get(i) == temps.get(j)) {
-					count++;
-					// To avoid counting same element again
-					fr[j] = visited;
-				}
-			}
-			if (fr[i] != visited)
-				fr[i] = count;
-		}
 	}
 
-	/***
-	 * Receives a single dimension Integer array. From this array the dataset that
-	 * will be used for the visualization is generated. Finally, The chart is
-	 * generated with the use of the aforementioned dataset and then presented in
-	 * the screen.
-	 * 
-	 * @param dataValues Single dimension integer array
-	 */
-	public void generateChart(int[] dataValues) {
+	public static int[] cfreq(File f) {
+		try {
+			Scanner s1 = new Scanner(f);//read the file first time to find out how many grades the file has.
+			int n = 0; //the number of lines of the file
+			while(s1.hasNextLine()) {
+				
+				n++; 
+				s1.nextLine();
+			 }
+			 s1.close(); //close the file
+			Scanner s2=new Scanner(f); //read the file second time to initialize the array the grades.
+			int[] arrayofgrades = new int[n];//the array that contains all the grades
+			try{ 
+				for (int i = 0; i < arrayofgrades.length; i++) {
+					arrayofgrades[i] = s2.nextInt();
+						
+					}
+		int count; // counts the frequency of each grade
+		 int [] cf = new int [arrayofgrades.length];  
+        int visited = -1;  
+        
+        for(int i = 0; i < arrayofgrades.length; i++){  
+            count = 1;  
+            for(int j = i+1; j < arrayofgrades.length; j++){  
+                if(arrayofgrades[i] == arrayofgrades[j]){  
+                    count++;  
+                    //To avoid counting same element again  
+                    cf[j] = visited;  
+                }  
+            }  
+            if(cf[i] != visited)  
+                cf[i] = count;  
+        }  
+        int[] fr=new int[11];
+        int c=0;
+        for(int i = 0; i < cf.length; i++){  
+            if(cf[i] != visited) {
+            	fr[c]=cf[i];
+            	c++;
+            }
+                  
+        }
+        return fr;
+	}catch (NoSuchElementException e1){
+				System.out.print(e1.getMessage());
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Exception");
+		return null;
+	}
+
+	public static void generateChart(int[] dataValues) {
 		/*
 		 * The XYSeriesCollection object is a set XYSeries series (dataset) that can be
 		 * visualized in the same chart
@@ -81,7 +106,7 @@ public class HistogramGenerator {
 		boolean urls = false; // do not visualize urls
 
 		// Declare and initialize a createXYLineChart JFreeChart
-		JFreeChart chart = ChartFactory.createXYLineChart("Chart title", "x_axis title", "y_axis_title", dataset,
+		JFreeChart chart = ChartFactory.createXYLineChart("Grades' Frequency", "frequency", "grade", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 
 		/*
@@ -93,5 +118,4 @@ public class HistogramGenerator {
 		// makes the previously created frame visible
 		frame.setVisible(true);
 	}
-
 }
