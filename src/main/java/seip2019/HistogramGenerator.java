@@ -14,7 +14,11 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-
+/***
+ * 
+ * @author skaragiannidis The purpose of this class is to read a file with grades,
+ * find the frequency of every grade and demonstrate the histogram.
+ */
 public class HistogramGenerator {
 	public static void main(String[] args) {
 
