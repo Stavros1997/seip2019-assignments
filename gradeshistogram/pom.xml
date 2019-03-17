@@ -26,7 +26,7 @@
     <configuration>
      <archive>
       <manifest>
-       <mainClass>HistogramGenerator</mainClass>
+       <mainClass>seip2019.HistogramGenerator</mainClass>
       </manifest>
      </archive>
      <descriptorRefs>
