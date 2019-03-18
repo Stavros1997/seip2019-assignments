@@ -1,13 +1,8 @@
 package seip2019;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.awt.List;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
