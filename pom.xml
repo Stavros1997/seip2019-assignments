@@ -4,8 +4,8 @@
   <artifactId>seip2019</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>s2019</name>
-  <description>Project Stavros</description>
+  <name>seip_parent</name>
+  <description>The parent with the module that has the HistogramGenerator class.</description>
   <modules>
   	<module>gradeshistogram</module>
   </modules>
