@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public 
 class analyzer_string implements Strategy {
-	public static int countclass(String[] file) { //count how many classes the file has
+	public int countclass(String[] file) { //count how many classes the file has
 		int count=0;
 		// Convert String Array to List
         List <String> list = Arrays.asList(file);
@@ -19,7 +19,7 @@ class analyzer_string implements Strategy {
 	
     
 }
-	public static int countnumberoflines(String [] file) { //count how many lines the file has
+	public  int countnumberoflines(String [] file) { //count how many lines the file has
 		int count=0;
 		// Convert String Array to List
         List <String> list = Arrays.asList(file);
@@ -28,7 +28,7 @@ class analyzer_string implements Strategy {
         }
 	return count;
 	}
-	public static int countmethods(String[] file) { //count how many methods the file has
+	public int countmethods(String[] file) { //count how many methods the file has
 		int count=0;
 		// Convert String Array to List
         List <String> list = Arrays.asList(file);
