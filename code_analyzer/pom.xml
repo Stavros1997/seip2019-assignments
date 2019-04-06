@@ -6,7 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>code_analyzer</artifactId>
-  <name>stavros_child</name>
+  <name>code_analyzer_module</name>
  <packaging> jar </packaging>
  <description>seip2019_module</description>
  <build>
