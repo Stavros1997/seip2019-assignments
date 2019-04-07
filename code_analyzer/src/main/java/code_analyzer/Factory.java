@@ -1,6 +1,8 @@
 package code_analyzer;
-
-public class Factory {//creates object of analyzers
+/**
+*creates object of analyzers
+*/
+public class Factory {
 	public static Strategy  choose_analyzer(String choice) {
 		if(choice=="String") {
 			return new analyzer_string();
