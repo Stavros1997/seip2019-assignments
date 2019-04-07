@@ -1,7 +1,9 @@
 package code_analyzer;
-/**
-*creates object of analyzers
-*/
+/***
+ * 
+ * @author StavrosKar The purpose of this class is to create object of analyzers.
+ *
+ */
 public class Factory {
 	public static Strategy  choose_analyzer(String choice) {
 		if(choice=="String") {
