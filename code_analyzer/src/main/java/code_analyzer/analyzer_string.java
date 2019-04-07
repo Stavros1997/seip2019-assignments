@@ -3,9 +3,13 @@ package code_analyzer;
 import java.util.List;
 import java.io.File;
 import java.util.Arrays;
+/***
+ * 
+ * @author StavrosKar The purpose of this class is to find loc,nom,noc.
+ *
+ */
 
-public 
-class analyzer_string implements Strategy {
+public class analyzer_string implements Strategy {
 	public int countclass(String[] file) { //count how many classes the file has
 		int count=0;
 		// Convert String Array to List
