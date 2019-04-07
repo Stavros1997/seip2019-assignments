@@ -3,8 +3,10 @@ package code_analyzer;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
-public class Facade {//calls factory method and utility method
+/**
+*calls factory method and utility method
+*/
+public class Facade {
 	
 	
 	public static void readsourcecode (String [] file) {
