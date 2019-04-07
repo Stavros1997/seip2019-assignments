@@ -6,3 +6,5 @@ To build this application you have to clone the repo to your local,build it with
 
 Maven version:maven-3.6.0
 Java version:1.8.0_191
+
+* [Code analyzer](#code_analyzer)
