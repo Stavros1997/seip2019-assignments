@@ -3,9 +3,11 @@ package code_analyzer;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-/**
-*calls factory method and utility method
-*/
+/***
+ * 
+ * @author StavrosKar The purpose of this class is to call factory methods and utility methods.
+ *
+ */
 public class Facade {
 	
 	
