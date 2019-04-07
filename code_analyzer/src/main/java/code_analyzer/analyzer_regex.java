@@ -1,7 +1,9 @@
 package code_analyzer;
 
 import java.util.regex.*;
-
+/**
+*code analyzer using regular expressions
+*/
 public  class analyzer_regex implements Strategy {
 	//private static final String REGEX = "\\bcat\\b";
 	  // private static final String INPUT = "cat cat cat cattie cat";
