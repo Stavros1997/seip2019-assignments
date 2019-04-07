@@ -7,7 +7,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-
+/***
+ * 
+ * @author StavrosKar The purpose of this class is to read a file and write in a file.
+ *
+ */
 public class utility {
 	public static String[] readfile(File f) {
 		try {
