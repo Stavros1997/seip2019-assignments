@@ -3,7 +3,7 @@ package code_analyzer;
 import java.util.regex.*;
 /***
  * 
- * @author StavrosKar The purpose of this class is to call factory methods and utility methods.
+ * @author StavrosKar The purpose of this class is to count loc,noc and nom.
  *
  */
 public  class analyzer_regex implements Strategy {
