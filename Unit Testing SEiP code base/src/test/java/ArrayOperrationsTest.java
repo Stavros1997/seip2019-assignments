@@ -7,7 +7,9 @@ import filehandlers.FileIO;
 import operations.ArrayOperrations;
 import operations.IntegerOperations;
 public class ArrayOperrationsTest {
-	ArrayOperrations arop;
+	FileIO fl= new FileIO();
+	IntegerOperations intop=new IntegerOperations();
+	ArrayOperrations arop=new ArrayOperrations(fl,intop);
 	@Test
 	public void test_find_max_in_file_Mocking_normal() {
 		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
@@ -21,18 +23,7 @@ public class ArrayOperrationsTest {
 	@Test(expected=IllegalArgumentException.class)
 	public void test_find_max_in_file_Mocking_exception() {
 		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test4.txt";
-		int[] linesList = {1};
-		FileIO fl=mock(FileIO.class);
-		when(fl.readFile(filepath)).thenReturn(linesList);
-		
-		arop.findMaxInFile(filepath);
-		
-	}
-	@Test(expected= NumberFormatException.class)
-	public void test_find_max_in_file_Mocking_exception_numformat() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test3.txt";
-		String x;
-		int[] linesList = {1,2,x,3};
+		int[] linesList = {};
 		FileIO fl=mock(FileIO.class);
 		when(fl.readFile(filepath)).thenReturn(linesList);
 		
@@ -60,23 +51,13 @@ public class ArrayOperrationsTest {
 	@Test(expected=IllegalArgumentException.class)
 	public void test_reverse_signs_in_file_Mocking_exception() {
 		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test4.txt";
-		int[] linesList = {1};
+		int[] linesList = {};
 		FileIO fl=mock(FileIO.class);
 		when(fl.readFile(filepath)).thenReturn(linesList);
 		
 		arop.reverseArray(filepath);
 		
 	}
-	@Test(expected= NumberFormatException.class)
-	public void test_reverse_array_Mocking_exception_numformat() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test3.txt";
-		String x;
-		int[] linesList = {1,2,x,3};
-		FileIO fl=mock(FileIO.class);
-		when(fl.readFile(filepath)).thenReturn(linesList);
-		
-		arop.reverseArray(filepath);
-		
-	}
+	
 	
 }

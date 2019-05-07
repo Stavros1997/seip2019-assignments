@@ -1,6 +1,7 @@
 package operations;
 
 import filehandlers.FileIO;
+import operations.IntegerOperations;
 
 /***
  * A class that performs operations on Arrays
