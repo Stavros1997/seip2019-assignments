@@ -1,10 +1,18 @@
-# This is the repository for the assignments of the SEIP course.
+# Seip2019 assignments
 
-To build this application you have to clone the repo to your local,build it with an IDE(like Eclipse) with maven and run it with:$ java -jar gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar grades.txt(your file with the grades)
+[![codecov](https://codecov.io/gh/Stavros1997/seip2019-assignments/branch/master/graph/badge.svg?token=gpqyUTNf4W)](https://codecov.io/gh/Stavros1997/seip2019-assignments)
 
+## Built With
 
+* Java  8 
+* Eclipse IDE
+* [Maven](https://maven.apache.org/) - Dependency Management
 
-Maven version:maven-3.6.0
-Java version:1.8.0_191
+## Assignments
+1. [HistogramGenerator](https://github.com/Stavros1997/seip2019-assignments/tree/master/gradeshistogram)
+2. [Code Analyzers](https://github.com/Stavros1997/seip2019-assignments/tree/master/code_analyzer)
+3. [UnitTesting](https://github.com/Stavros1997/seip2019-assignments/tree/master/Unit%20Testing%20SEiP%20code%20base)
 
-* [Code analyzer](#code_analyzer)
+## Authors
+
+* **Stavros Karagiannidis** - *Initial work* - [Stavros1997](https://github.com/Stavros1997)
