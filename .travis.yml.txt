@@ -1,6 +1,19 @@
 language: java
 
 jdk:
--oraclejdk8
+  -oracle8
+  
+branches:
+only:
+  - master
+before_script:
+  - cd seip2019
+ 
+ 
+sudo: false # faster builds
 
-branches
+script: 
+  - mvn clean package jacoco:report cobertura:cobertura
+
+after_success:
+- bash <(curl -s https://codecov.io/bash) -t 17317396-f180-4dd6-b093-24ade403760f
