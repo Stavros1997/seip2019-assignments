@@ -1,3 +1,5 @@
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,9 +23,9 @@ public class FileIOTest {
 	
 	@Test
 	public void test_file_found() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
-		int[] linesList = {1,2,3,4,5};
-		Assert.assertEquals(linesList,file.readFile(filepath) );
+		Path filepath=Paths.get("src","test","resources","test1.txt");
+		int[] linesList =new int[] {1,2,3,4,5};
+		Assert.assertArrayEquals(linesList,file.readFile(filepath.toString()) );
 		
 	}
 	@Rule

@@ -1,5 +1,8 @@
 import static org.mockito.Mockito.*;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -34,17 +37,20 @@ public class ArrayOperrationsTest {
 	
 	@Test
 	public void test_reverse_signs_in_file_Mocking_normal() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
-		int[] linesList = {1,2,3,4,5};
-		int[] reversedlinesList = {-1,-2,-3,-4,-5};
-		FileIO fl=mock(FileIO.class);
 		IntegerOperations intop= mock(IntegerOperations.class);
-		when(fl.readFile(filepath)).thenReturn(linesList);
+		int[] linesList = new int[] {1,2,3,4,5};
+		int[] reversedlinesList = new int[] {-1,-2,-3,-4,-5};
 		for(int i=0;i<linesList.length;i++) {
-		when(intop.reverseSign(linesList[i])).thenReturn(reversedlinesList[i]);
-		}
+			when(intop.reverseSign(linesList[i])).thenReturn(reversedlinesList[i]);
+			}
+		String  filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
 		
-		Assert.assertEquals(reversedlinesList,arop.reverseArray(filepath));
+		
+		
+		
+		
+		
+		Assert.assertArrayEquals(reversedlinesList,arop.reverseArray(filepath));
 		
 	}
 	
