@@ -15,7 +15,7 @@ public class ArrayOperrationsTest {
 	ArrayOperrations arop=new ArrayOperrations(fl,intop);
 	@Test
 	public void test_find_max_in_file_Mocking_normal() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
+		String filepath="src/test/resources/test1.txt";
 		int[] linesList = {1,2,3,4,5};
 		FileIO fl=mock(FileIO.class);
 		when(fl.readFile(filepath)).thenReturn(linesList);
@@ -25,7 +25,7 @@ public class ArrayOperrationsTest {
 	}
 	@Test(expected=IllegalArgumentException.class)
 	public void test_find_max_in_file_Mocking_exception() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test4.txt";
+		String filepath="src/test/resources/test4.txt";
 		int[] linesList = {};
 		FileIO fl=mock(FileIO.class);
 		when(fl.readFile(filepath)).thenReturn(linesList);
@@ -43,7 +43,7 @@ public class ArrayOperrationsTest {
 		for(int i=0;i<linesList.length;i++) {
 			when(intop.reverseSign(linesList[i])).thenReturn(reversedlinesList[i]);
 			}
-		String  filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test1.txt";
+		String  filepath="src/test/resources/test1.txt";
 		
 		
 		
@@ -56,7 +56,7 @@ public class ArrayOperrationsTest {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void test_reverse_signs_in_file_Mocking_exception() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test4.txt";
+		String filepath="src/test/resources/test4.txt";
 		int[] linesList = {};
 		FileIO fl=mock(FileIO.class);
 		when(fl.readFile(filepath)).thenReturn(linesList);

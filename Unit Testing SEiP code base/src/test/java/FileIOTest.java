@@ -16,7 +16,7 @@ public class FileIOTest {
 	public ExpectedException thrown = ExpectedException.none();
 	@Test
 	public void test_filenotfound() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test2.txt";
+		String filepath="src/test/resources/test2.txt";
 		thrown.expectMessage("File " + filepath + " does not exist");
 		file.readFile(filepath);
 	}
@@ -32,7 +32,7 @@ public class FileIOTest {
 	public ExpectedException expected = ExpectedException.none();
 	@Test
 	public void test_invalid_file() {
-		String filepath="C:\\Users\\Stavros\\eclipse-workspace\\seip2019\\Unit Testing SEiP code base\\src\\test\\resources\\test3.txt";
+		String filepath="src/test/resources/test3.txt";
 		thrown.expect(NumberFormatException.class);
 		file.readFile(filepath);
 	}

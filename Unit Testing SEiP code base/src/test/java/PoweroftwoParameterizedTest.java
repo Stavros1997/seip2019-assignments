@@ -11,7 +11,8 @@ import org.junit.runners.Parameterized.Parameters;
 import operations.IntegerOperations;
 
 @RunWith(Parameterized.class)
-public class PoweroftwoParameterized {
+
+public class PoweroftwoParameterizedTest {
 	@Parameter (value=0)
 	public int power;
 	@Parameter (value=1)
